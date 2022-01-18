@@ -2,6 +2,8 @@
 
 ![ Alt text](demo.gif) [](demo.gif)
 
+![Screenshot](notification.png)
+
 ## Features
 
 This notification service is built with react and no external library as part of SoSafe case study with following features -
