@@ -18,7 +18,7 @@ export function useNotifications() {
         );
       }
 
-    setTimeout(removeNotification, 4000);
+    setTimeout(removeNotification, 3000);
   }, []);
 
   return { notify, notifications };

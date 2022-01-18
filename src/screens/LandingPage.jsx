@@ -3,21 +3,46 @@ import styled from "styled-components";
 
 const Container = styled.div`
   padding: 8px 16px 8px 16px;
-  display: 'flex';
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-color:#eff9f7;
 `;
+
+const StyledButton = styled.button`
+  margin: 8px;
+  padding: 8px;
+  background-color: #05668d;
+  color: white;
+  width: 30%;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: #05668d;
+  }
+`;
+
+const Header = styled.h2`
+  color: #02a896;
+`;
+
 export default function LandingPage() {
   const notify = useNotify();
 
   return (
     <Container>
-      <button
+      <Header>React Toast Notifications</Header>
+      <StyledButton
         onClick={() =>
           notify({ title: "Created new user", description: "Nico Dietz" })
         }
       >
        Success
-      </button>
-      <button
+      </StyledButton>
+      <StyledButton
         onClick={() =>
           notify({
             type: "success",
@@ -28,43 +53,43 @@ export default function LandingPage() {
         }
       >
         Success (with more)
-      </button>
-      <button
+      </StyledButton>
+      <StyledButton
         onClick={() =>
           notify({
             type: "warning",
             title: "Backup",
             description:
-              "It's been over 7 days since you have last made a back-up",
+              "Your iCloud backup is not uptodate",
           })
         }
       >
         Warning
-      </button>
-      <button
+      </StyledButton>
+      <StyledButton
         style={{ marginBottom: 16 }}
         onClick={() =>
           notify({
             type: "error",
             title: "Couldn't save",
-            description: "Please fill in the required fields",
+            description: "Your backup couldn't be saved",
           })
         }
       >
        Error
-      </button>
-      <button
+      </StyledButton>
+      <StyledButton
         style={{ marginBottom: 16 }}
         onClick={() =>
           notify({
             type: "info",
             title: "Hello",
-            description: "This in information",
+            description: "Welcome to soSafe!",
           })
         }
       >
         Information
-      </button>
+      </StyledButton>
     </Container>
   );
 }
