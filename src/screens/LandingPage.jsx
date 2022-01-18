@@ -67,7 +67,6 @@ export default function LandingPage() {
         Warning
       </StyledButton>
       <StyledButton
-        style={{ marginBottom: 16 }}
         onClick={() =>
           notify({
             type: "error",
@@ -79,7 +78,6 @@ export default function LandingPage() {
        Error
       </StyledButton>
       <StyledButton
-        style={{ marginBottom: 16 }}
         onClick={() =>
           notify({
             type: "info",
